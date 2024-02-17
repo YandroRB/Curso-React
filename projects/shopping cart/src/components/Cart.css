@@ -1,0 +1,15 @@
+.cart-container{
+    display: none;
+    position: fixed;
+    right: 0px;
+    top: 0px;
+    width: 200px;
+    background-color: aqua; 
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.cart-button ~ input:checked ~ .cart-container{
+    display: block;
+    height: 100%;
+}

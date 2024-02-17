@@ -1,0 +1,7 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    height: 100vh;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-image: linear-gradient(to right top, #001731, #00213d, #012c4a, #013756, #004363);
+}
