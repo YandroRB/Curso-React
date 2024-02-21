@@ -1,0 +1,16 @@
+.filters-button:hover{
+    cursor: pointer;
+}
+
+.filters-button ~ input:checked ~ .filters-container{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+}
+
+@media screen and (min-width: 768px) {
+    .filters-button{
+        display: none;
+    }
+}
