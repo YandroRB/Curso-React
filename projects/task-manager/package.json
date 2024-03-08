@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "devDependencies": {
+    "@types/react-dom": "^18.2.21",
     "standard": "^17.1.0",
     "vite": "^5.1.0"
   },
