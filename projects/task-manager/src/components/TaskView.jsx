@@ -1,7 +1,10 @@
+import { Link } from "react-router-dom";
 import { formatDate } from "../utils/utils";
 
 export default function TaskView({taskList}){
+
     return(
+      <>
       <table className="table-auto border-collapse border ">
         <thead>
           <tr>
@@ -14,11 +17,10 @@ export default function TaskView({taskList}){
           {
             taskList.map(task =>{
               const {id,title,time,status}=task;
-              const fecha = new Date(time);
               return (
                 <tr key={id}>
-                  <td className="border py-1 px-9">{title}</td>
-                  <td className="border py-1 px-9 capitalize">{formatDate(fecha)}</td>
+                  <td className="border py-1 px-9 task-title">{title} <Link className="show-Task" to={`/tasks/${id}`}>Abrir</Link></td>
+                  <td className="border py-1 px-9 capitalize"><time dateTime={time}>{formatDate(time)}</time></td>
                   <td className="border py-1 px-9 capitalize">{status}</td>
                 </tr>
               )
@@ -26,5 +28,23 @@ export default function TaskView({taskList}){
           }
         </tbody>
       </table>
+      <style>
+        {
+          `
+          .task-title{
+            position:relative;
+          }
+          .show-Task{
+            display:none;
+            position:absolute;
+            right:1rem;
+          }
+          .task-title:hover .show-Task{
+            display:inline;
+          }
+          `
+        }
+      </style>
+      </>
     )
   }

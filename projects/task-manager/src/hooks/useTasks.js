@@ -13,5 +13,9 @@ export function useTasks(){
         type:'EDIT_TASK',
         payload:taskEdited
     })
-    return {state,addTask,editTask,newIDTask};
+    const findTask=(taskID)=>dispatch({
+        type:'FIND_TASK',
+        payload:taskID
+    })
+    return {state,addTask,editTask,newIDTask,findTask};
 }

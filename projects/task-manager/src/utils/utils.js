@@ -1,4 +1,5 @@
-export function formatDate(date) {
+export function formatDate(dateString) {
+    const date = new Date(dateString)
     const options = { month: 'long', day: 'numeric', year: 'numeric', hour: 'numeric', minute: '2-digit', hour12: true };
     const parts = new Intl.DateTimeFormat('es', options).formatToParts(date);
   
