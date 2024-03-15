@@ -30,3 +30,7 @@ export function formatDate(dateString) {
     // Construye el formato deseado
     return `${month} ${day}, ${year} ${hour}:${minute} ${dayPeriod}`;
   }
+
+export function FilterObject(array,filterBy,property){
+    return array.filter(element=>element[property]===filterBy);
+}
