@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
 import { formatDate } from "../utils/utils";
 
-export default function TaskView({taskList}){
 
+export default function TaskView({taskList}){
+  
     return(
       <>
       <table className="table-auto border-collapse border ">
