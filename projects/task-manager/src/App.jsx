@@ -4,13 +4,15 @@ import TaskView from "./components/TaskView";
 import { useTasks } from "./hooks/useTasks";
 import TasksList from "./components/TasksList";
 import { FilterObject } from "./utils/utils";
+import BarChart from "./components/BarChart";
 
 function App() {
   const { state } = useTasks();
+  const datos={labels:["A","B","C"],data:[56,89,13]}
   return (
     <>
       <TaskView taskList={state.taskList} />
-
+      <BarChart chartData={datos}/>
       <Routes>
         <Route path="/tasks/:id" element={<TaskDetails />} />
         <Route
