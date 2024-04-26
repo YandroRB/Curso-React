@@ -8,10 +8,9 @@ function TaskDetails() {
   const { state, findTask } = useTasks();
   useEffect(() => {
     findTask(id);
-  }, [id, state.foundedTask]);
+  }, [id]);
 
-  const task= {title:'',description:'',time:'2022-01-24T16:00:00Z',status:''};
-  const {title,description,time,status}=state.foundedTask?state.foundedTask:task;
+  const {title,description,time,status}=state.foundedTask;
   
   return (
     <aside>
