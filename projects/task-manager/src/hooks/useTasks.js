@@ -17,5 +17,9 @@ export function useTasks(){
         type:'FIND_TASK',
         payload:taskID
     })
-    return {state,addTask,editTask,newIDTask,findTask};
+    const delTask=(task)=>dispatch({
+        type:'DEL_TASK',
+        payload:task
+    })
+    return {state,addTask,editTask,newIDTask,findTask,delTask};
 }
