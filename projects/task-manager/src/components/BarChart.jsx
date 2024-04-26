@@ -21,7 +21,7 @@ ChartJS.register(
 function BarChart({ chartData }) {
 
   return (
-    <div>
+    <div className="bg-white p-5 rounded-sm my-10">
       <Bar
         data={ {
           labels: chartData.labels,
