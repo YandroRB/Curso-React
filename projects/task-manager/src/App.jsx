@@ -1,35 +1,39 @@
 import TaskDetails from "./components/TaskDetails";
-import { Routes, Route,Outlet} from "react-router-dom";
-import TaskView from "./components/TaskView";
+import { Routes, Route} from "react-router-dom";
 import { useTasks } from "./hooks/useTasks";
 import TasksList from "./components/TasksList";
 import { FilterObject } from "./utils/utils";
-import BarChart from "./components/BarChart";
+import SideBar from "./pages/SideBar";
+import Prueba from "./pages/Untitled-1";
+import Estadisticas from "./pages/Estadisticas";
+import BoardView from "./pages/BoardView";
+import TableTasks from "./components/TableTasks";
+import ListView from "./pages/ListView";
+import Nav from "./components/Nav";
+import { useEffect } from "react";
 
 function App() {
   const { state } = useTasks();
-  const datos={labels:["A","B","C"],data:[56,89,13]}
+
   return (
     <>
-      <TaskView taskList={state.taskList} />
-      <BarChart chartData={datos}/>
+    <SideBar/>
+    <main style={{gridArea:'main'}} className=" w-full pt-3 pl-3 pr-3  bg-gray-100 ">
       <Routes>
-        <Route path="/tasks/:id" element={<TaskDetails />} />
-        <Route
-          path="/view"
-          element={
-            <>
-              <TasksList tasks={FilterObject(state.taskList,'pendiente','status')} status={"pendiente"} />
-              <TasksList tasks={FilterObject(state.taskList,'en progreso','status')} status={"en progreso"} />
-              <TasksList tasks={FilterObject(state.taskList,'completo','status')} status={"completo"} />
-            </>
-          }
-        />
+          <Route path="/" element={<Estadisticas/>}/>
+          <Route path="/tasks/:id" element={<TaskDetails />} />
+          <Route path="/tasks" element={<Nav/>}>
+            <Route index element={<BoardView/>} /> 
+            <Route path="board" element={<BoardView/>} /> 
+            <Route path="list" element={<ListView/>}/>
+          </Route>
+          <Route path="/prueba" element={<Prueba/>}/>
+          <Route path="/tasks/pendiente/board" element={<TasksList tasks={FilterObject(state.taskList,'pendiente','status')} status={"pendiente"}  styles={'bg-red-300/[.07] border-red-300  rounded-lg border-t-8 p-4 my-5 h-fit pb-8'}/>}/>
+          <Route path="/tasks/en progreso/board" element={<TasksList tasks={FilterObject(state.taskList,'en progreso','status')} status={"en progreso"} styles={'bg-orange-300/[.07] border-orange-300  rounded-lg border-t-8 p-4 my-5 h-fit pb-8'}/>}/>
+          <Route path="/tasks/completo/board" element={<TasksList tasks={FilterObject(state.taskList,'completo','status')} status={"completo"} styles={'bg-lime-300/[.07] border-lime-300  rounded-lg border-t-8 p-4 my-5 h-fit pb-8'}/>}/>
+        </Routes>
+    </main>
 
-        <Route path="/view/pendiente" element={<TasksList tasks={FilterObject(state.taskList,'pendiente','status')} status={"pendiente"} />}/>
-        <Route path="/view/en progreso" element={<TasksList tasks={FilterObject(state.taskList,'en progreso','status')} status={"en progreso"} />}/>
-        <Route path="/view/completo" element={<TasksList tasks={FilterObject(state.taskList,'completo','status')} status={"completo"} />}/>
-      </Routes>
     </>
   );
 }
