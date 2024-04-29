@@ -1,5 +1,5 @@
 import TaskDetails from "./components/TaskDetails";
-import { Routes, Route} from "react-router-dom";
+import { Routes, Route, useLocation} from "react-router-dom";
 import { useTasks } from "./hooks/useTasks";
 import TasksList from "./components/TasksList";
 import { FilterObject } from "./utils/utils";
@@ -7,19 +7,20 @@ import SideBar from "./pages/SideBar";
 import Prueba from "./pages/Untitled-1";
 import Estadisticas from "./pages/Estadisticas";
 import BoardView from "./pages/BoardView";
-import TableTasks from "./components/TableTasks";
 import ListView from "./pages/ListView";
 import Nav from "./components/Nav";
-import { useEffect } from "react";
+import ModalFormTask from "./pages/ModalFormTask";
 
 function App() {
+  const location = useLocation();
+  const prevLocation=location.state?.previousLocation;
   const { state } = useTasks();
 
   return (
     <>
     <SideBar/>
     <main style={{gridArea:'main'}} className=" w-full pt-3 pl-3 pr-3  bg-gray-100 ">
-      <Routes>
+      <Routes location={prevLocation || location} >
           <Route path="/" element={<Estadisticas/>}/>
           <Route path="/tasks/:id" element={<TaskDetails />} />
           <Route path="/tasks" element={<Nav/>}>
@@ -33,6 +34,13 @@ function App() {
           <Route path="/tasks/completo/board" element={<TasksList tasks={FilterObject(state.taskList,'completo','status')} status={"completo"} styles={'bg-lime-300/[.07] border-lime-300  rounded-lg border-t-8 p-4 my-5 h-fit pb-8'}/>}/>
         </Routes>
     </main>
+    {
+      prevLocation &&(
+        <Routes>
+          <Route path="/tasks/create" element={<ModalFormTask previousLocation={prevLocation}/>}/>
+        </Routes>
+      )
+    }
 
     </>
   );
