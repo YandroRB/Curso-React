@@ -18,7 +18,7 @@ export function useForm({initialTask}){
         const frmTask=Object.fromEntries(new FormData(formRef.current));
         const fecha= new Date();
         const newTask={
-            id:newIDTask.current,
+            id:newIDTask.current.toString(),
             ...frmTask,
             time:fecha.toISOString()
         }
