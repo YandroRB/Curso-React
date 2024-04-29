@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { CloseIcon, IconAddR, IconBxsTrash, IconCaretDown, IconCircleFill, IconListTask, IconViewDashboard, ListIcon } from "../utils/Icons";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 
 function SideBar() {
+const location=useLocation();
 const [isOpen, setIsOpen] = useState(false);
 const [isSubOpen, setIsSubOpen]=useState(false);
 
@@ -14,7 +15,7 @@ const [isSubOpen, setIsSubOpen]=useState(false);
   }
   return (
     <>
-    <aside style={{gridArea:'sidebar'}} className={`fixed inset-y-0 left-0 w-64 select-none transition-transform duration-300 transform ${isOpen?"translate-x-0":"-translate-x-full"} 
+    <aside style={{gridArea:'sidebar'}} className={`z-50 fixed inset-y-0 left-0 w-64 select-none transition-transform duration-300 transform ${isOpen?"translate-x-0":"-translate-x-full"} 
     lg:translate-x-0  lg:static lg:h-screen border-r border-gray-200 bg-white`}>
       <nav >
         <div className=" flex items-center justify-center h-20 relative bg-indigo-950 text-sky-300">
@@ -57,7 +58,7 @@ const [isSubOpen, setIsSubOpen]=useState(false);
           <ListIcon/>
         </button>
     </div>
-    <div className="lg:ml-auto cursor-pointer text-gray-600 hover:text-blue-500 focus:outline-none"><IconAddR height="2em" width="2em"/></div>
+    <div className="lg:ml-auto cursor-pointer text-gray-600 hover:text-blue-500 focus:outline-none"><Link to={"/tasks/create"} state={{previousLocation: location}}><IconAddR height="2em" width="2em"/></Link></div>
     </header>
    </>
   );
