@@ -1,9 +1,11 @@
 import { useEffect, useRef } from "react";
 import { useTasks } from "./useTasks";
+import { useNavigate } from "react-router-dom";
 
 export function useForm({initialTask}){
     const formRef= useRef(null);
     const {addTask,newIDTask,editTask}=useTasks();
+    const navigate = useNavigate();
 
     useEffect(()=>{
         if(initialTask){
@@ -24,6 +26,7 @@ export function useForm({initialTask}){
         }
         newIDTask.current+=1;
         addTask(newTask);
+        navigate(-1);
     }
     const handleEditForm = (event)=>{
         event.preventDefault();
