@@ -58,7 +58,7 @@ const [isSubOpen, setIsSubOpen]=useState(false);
           <ListIcon/>
         </button>
     </div>
-    <div className="lg:ml-auto cursor-pointer text-gray-600 hover:text-blue-500 focus:outline-none"><Link to={"/tasks/create"} state={{previousLocation: location}}><IconAddR height="2em" width="2em"/></Link></div>
+    <div className="lg:ml-auto cursor-pointer text-gray-600  hover:text-indigo-500 focus:outline-none"><Link to={"/tasks/create"} state={{previousLocation: location}}><IconAddR height="2em" width="2em"/></Link></div>
     </header>
    </>
   );
