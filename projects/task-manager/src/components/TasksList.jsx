@@ -31,8 +31,8 @@ function TasksList({ tasks, status,styles}) {
       <ul className={` space-y-2 ${sectionSize>=768?'grid grid-cols-3 gap-5 justify-stretch':'' }`}>
         {tasks.map((task) => {
           return (
-            <li draggable onDragStart={(event) => handleDrag(event,task)} className={` cursor-pointer p-2 shadow-lg bg-opacity-20 backdrop-blur-lg backdrop-filter bg-white  rounded-lg `} key={task.id}>
-              <Link to={`/tasks/${task.id}`}>
+            <li draggable onDragStart={(event) => handleDrag(event,task)} className={` cursor-pointer shadow-lg bg-opacity-20 backdrop-blur-lg backdrop-filter bg-white  rounded-lg `} key={task.id}>
+              <Link className="w-full inline-block p-2" to={`/tasks/${task.id}`}>
                 {task.title}
               </Link>
             </li>
