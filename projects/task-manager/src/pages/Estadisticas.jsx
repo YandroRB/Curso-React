@@ -8,7 +8,7 @@ function Estadisticas() {
   const datos = {
     labels: ["Pendientes", "En Progreso", "Completas"],
     titles:["Pendientes", "En Progreso", "Completas","Todas"],
-    links:["/view/pendiente","/view/en progreso","/view/completo","/view"],
+    links:["/tasks/pendiente/board","/tasks/en progreso/board","/tasks/completo/board","/tasks"],
     data: [
       FilterObject(state.taskList, "pendiente", "status").length,
       FilterObject(state.taskList, "en progreso", "status").length,
