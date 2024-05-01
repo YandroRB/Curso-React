@@ -1,5 +1,5 @@
 import {data} from '../../data.json'
-export const initialState={taskList:[...data],foundedTask:undefined,trash:[]};
+export const initialState={taskList:[...data],trash:[]};
 
 const reducerActions={
     'ADD_TASK':(state,actionPayload)=>{
@@ -21,12 +21,6 @@ const reducerActions={
         const newState={...state};
         const findIndexTask=newState.taskList.findIndex(task => task.id === actionPayload.id);
         newState.taskList[findIndexTask]=actionPayload;
-        return newState;
-    },
-    'FIND_TASK':(state,actionPayload)=>{
-        const newState={...state}
-        const foundedTask= state.taskList.find(task=>task.id === actionPayload);
-        newState.foundedTask=foundedTask;
         return newState;
     }
 }
