@@ -1,24 +1,31 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useTasks } from "../hooks/useTasks";
-import { formatDate } from "../utils/utils";
-import { useParams } from "react-router-dom";
+import { FilterObject, formatDate } from "../utils/utils";
+import { useNavigate, useParams } from "react-router-dom";
 
 function TaskDetails() {
   const { id } = useParams();
-  const { state, findTask } = useTasks();
-  useEffect(() => {
-    findTask(id);
-  }, [id]);
+  const { state } = useTasks();
+  const navigate=useNavigate();
+  const [data,setData]=useState();
 
-  const {title,description,time,status}=state.foundedTask;
+  useEffect(() => {
+    const findObject=FilterObject(state.taskList,id,"id");
+    if(findObject.length>0) setData(findObject[0]);
+    else navigate('/not found');
+  }, [id]);
   
   return (
-    <aside>
-      <h2>{title}</h2>
-      <p>{description}</p>
-      <time dateTime={time}>{formatDate(time)}</time>
-      <p>{status}</p>
-    </aside>
+    <>
+      {data && (
+          <article>
+            <h2>{data.title}</h2>
+            <p>{data.description}</p>
+            <time dateTime={data.time}>{formatDate(data.time)}</time>
+            <p>{data.status}</p>
+          </article>
+        ) }
+    </>
   );
 }
 
