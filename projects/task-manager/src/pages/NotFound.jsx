@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 function NotFound() {
   const navigate = useNavigate();
   const handleButton = () => {
-    navigate(-1);
+    navigate("/");
   };
   return (
     <div className="w-full h-full bg-indigo-400/50 grid place-content-center text-center font-bold">
