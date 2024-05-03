@@ -31,8 +31,9 @@ export function useForm({initialTask}){
     const handleEditForm = (event)=>{
         event.preventDefault();
         const frmTask=Object.fromEntries(new FormData(formRef.current));
-        const newTask={...initialTask,...frmTask}
+        const newTask={...initialTask,...frmTask};
         editTask(newTask);
+        navigate(-1);
     }
     return {formRef,handleEditForm,handleForm}
 

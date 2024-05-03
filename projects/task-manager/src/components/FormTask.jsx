@@ -1,9 +1,12 @@
+import { useEffect } from "react";
 import { useForm } from "../hooks/useForm";
+import { useLocation } from "react-router-dom";
 
-export function FormTask({initialTask}){
-    const {formRef,handleEditForm,handleForm}=useForm({initialTask});
+export function FormTask(){
+    const {state:locationState}=useLocation();
+    const {formRef,handleEditForm,handleForm}=useForm({initialTask:locationState.task});
     return(
-        <form className=" space-y-3" ref={formRef} onSubmit={(event)=>initialTask?handleEditForm(event):handleForm(event)}>
+        <form className=" space-y-3" ref={formRef} onSubmit={(event)=>locationState.task?handleEditForm(event):handleForm(event)}>
             <div className="flex flex-col space-y-2">
                 <label className="font-semibold" htmlFor="taskTitle">Nombre de la tarea</label>
                 <input autoComplete="off" required className=" focus:outline-indigo-500 border border-indigo-300  rounded-md p-2" id="taskTitle" name="title" type="text"  />
