@@ -4,14 +4,12 @@ import { useTasks } from "./hooks/useTasks";
 import TasksList from "./components/TasksList";
 import { FilterObject } from "./utils/utils";
 import SideBar from "./pages/SideBar";
-import Prueba from "./pages/Untitled-1";
 import Estadisticas from "./pages/Estadisticas";
 import BoardView from "./pages/BoardView";
 import ListView from "./pages/ListView";
 import Nav from "./components/Nav";
 import ModalFormTask from "./pages/ModalFormTask";
 import NotFound from "./pages/NotFound";
-import { useEffect } from "react";
 
 function App() {
   const location = useLocation();
@@ -29,7 +27,6 @@ function App() {
             <Route path="board" element={<BoardView/>} /> 
             <Route path="list" element={<ListView/>}/>
           </Route>
-          <Route path="/prueba" element={<Prueba/>}/>
           <Route path="/tasks/pendiente/board" element={<TasksList tasks={FilterObject(state.taskList,'pendiente','status')} status={"pendiente"}  styles={'bg-red-300/[.07] border-red-300  rounded-lg border-t-8 p-4 my-5 h-fit pb-8'}/>}/>
           <Route path="/tasks/en progreso/board" element={<TasksList tasks={FilterObject(state.taskList,'en progreso','status')} status={"en progreso"} styles={'bg-orange-300/[.07] border-orange-300  rounded-lg border-t-8 p-4 my-5 h-fit pb-8'}/>}/>
           <Route path="/tasks/completo/board" element={<TasksList tasks={FilterObject(state.taskList,'completo','status')} status={"completo"} styles={'bg-lime-300/[.07] border-lime-300  rounded-lg border-t-8 p-4 my-5 h-fit pb-8'}/>}/>

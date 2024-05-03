@@ -46,9 +46,6 @@ const [isSubOpen, setIsSubOpen]=useState(false);
             </li>
           </ul>
           }
-          <li className="flex items-center cursor-pointer hover:transition hover:duration-200 hover:bg-indigo-500 hover:bg-opacity-50 p-2 rounded-lg">
-            <IconBxsTrash/> <span className=" ml-2">Basurero</span> 
-          </li >
         </ul>
       </nav>
     </aside>
