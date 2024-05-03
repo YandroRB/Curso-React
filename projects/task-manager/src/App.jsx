@@ -11,12 +11,12 @@ import ListView from "./pages/ListView";
 import Nav from "./components/Nav";
 import ModalFormTask from "./pages/ModalFormTask";
 import NotFound from "./pages/NotFound";
+import { useEffect } from "react";
 
 function App() {
   const location = useLocation();
   const prevLocation=location.state?.previousLocation;
   const { state } = useTasks();
-
   return (
     <>
     <SideBar/>
@@ -41,6 +41,7 @@ function App() {
       prevLocation &&(
         <Routes>
           <Route path="/tasks/create" element={<ModalFormTask previousLocation={prevLocation}/>}/>
+          <Route path="/tasks/edit" element={<ModalFormTask previousLocation={prevLocation}/>}/>
         </Routes>
       )
     }
