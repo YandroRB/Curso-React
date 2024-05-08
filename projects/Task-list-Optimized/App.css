@@ -1,0 +1,10 @@
+#app{
+    display: grid;
+    place-items: center;
+}
+main{
+    max-width: 750px;
+}
+.task-entrie > label{
+    display: inline-block;
+}

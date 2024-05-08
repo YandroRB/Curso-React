@@ -1,0 +1,7 @@
+{
+  "name": "Curso-React",
+  "packageManager": "yarn@4.2.1",
+  "workspaces": [
+    "projects/*"
+  ]
+}

@@ -1,0 +1,58 @@
+.modal{
+    display: grid;
+    place-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100vh;
+    background-color: hsl(0, 0%, 9%,.9);
+
+}
+.modal>.modal-container{
+    position: relative;
+    max-width: 768px;
+    background-color: hsl(0, 0%, 95%);
+    height: 75%;
+    overflow: auto;
+}
+.modal-container::-webkit-scrollbar, .container-description::-webkit-scrollbar{
+    width: 5px;
+  }
+.container-description{
+    height: 40%;
+    overflow:auto;
+    margin-bottom: 2rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 1rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+.container-video{
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    margin:20px
+}
+.container-video>iframe{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.modal-container>button{
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 30px;
+    font-weight: 400;
+    border: none;
+    border-radius: 0px 0px 10px 10px;
+    background-color: hsl(257, 100%, 67%);
+}

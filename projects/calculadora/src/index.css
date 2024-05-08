@@ -1,0 +1,11 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    display: grid;
+    place-content: center;
+    height: 100vh;
+    padding: 0px;
+    margin: 0px;
+    background-color: hsl(248, 10%, 30%);
+}

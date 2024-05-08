@@ -1,0 +1,193 @@
+{
+ "data":[
+    {
+      "id": "100",
+      "title": "Reunión de equipo",
+      "description": "Discutir los avances y próximos pasos del proyecto",
+      "time": "2022-01-10T09:00:00Z",
+      "status": "pendiente"
+    },
+    {
+      "id": "101",
+      "title": "Investigación de tecnologías",
+      "description": "Investigar nuevas tecnologías para mejorar el rendimiento del sistema",
+      "time": "2022-01-10T14:00:00Z",
+      "status": "en progreso"
+    },
+    {
+      "id": "102",
+      "title": "Corrección de errores",
+      "description": "Revisar y corregir los errores reportados por los usuarios",
+      "time": "2022-01-11T10:30:00Z",
+      "status": "completo"
+    },
+    {
+      "id": "103",
+      "title": "Optimización de código",
+      "description": "Analizar y mejorar el rendimiento del código existente",
+      "time": "2022-01-11T15:00:00Z",
+      "status": "en progreso"
+    },
+    {
+      "id": "104",
+      "title": "Implementación de nueva funcionalidad",
+      "description": "Desarrollar e integrar una nueva funcionalidad al sistema",
+      "time": "2022-01-12T09:30:00Z",
+      "status": "pendiente"
+    },
+    {
+      "id": "105",
+      "title": "Pruebas unitarias",
+      "description": "Realizar pruebas unitarias para garantizar la calidad del código",
+      "time": "2022-01-12T14:30:00Z",
+      "status": "pendiente"
+    },
+    {
+      "id": "106",
+      "title": "Revisión de código",
+      "description": "Realizar una revisión exhaustiva del código de un compañero",
+      "time": "2022-01-13T11:00:00Z",
+      "status": "pendiente"
+    },
+    {
+      "id": "107",
+      "title": "Actualización de documentación",
+      "description": "Actualizar la documentación del proyecto con los cambios recientes",
+      "time": "2022-01-13T16:00:00Z",
+      "status": "en progreso"
+    },
+    {
+      "id": "108",
+      "title": "Resolución de incidencias",
+      "description": "Investigar y solucionar las incidencias reportadas por los usuarios",
+      "time": "2022-01-14T10:00:00Z",
+      "status": "pendiente"
+    },
+    {
+      "id": "109",
+      "title": "Reunión con el cliente",
+      "description": "Presentar los avances del proyecto y recoger feedback del cliente",
+      "time": "2022-01-14T15:30:00Z",
+      "status": "completo"
+    },
+    {
+      "id": "110",
+      "title": "Mejora de la interfaz de usuario",
+      "description": "Diseñar y desarrollar mejoras en la interfaz de usuario",
+      "time": "2022-01-17T09:30:00Z",
+      "status": "pendiente"
+    },
+    {
+      "id": "111",
+      "title": "Optimización de consultas SQL",
+      "description": "Analizar y mejorar el rendimiento de las consultas SQL del sistema",
+      "time": "2022-01-17T14:00:00Z",
+      "status": "en progreso"
+    },
+    {
+      "id": "112",
+      "title": "Preparación de presentación",
+      "description": "Preparar una presentación sobre el proyecto para un evento",
+      "time": "2022-01-18T10:00:00Z",
+      "status": "pendiente"
+    },
+    {
+      "id": "113",
+      "title": "Desarrollo de pruebas de estrés",
+      "description": "Crear pruebas de estrés para evaluar la estabilidad del sistema",
+      "time": "2022-01-18T15:30:00Z",
+      "status": "pendiente"
+    },
+    {
+      "id": "114",
+      "title": "Revisión de seguridad",
+      "description": "Realizar una revisión de seguridad en el código del sistema",
+      "time": "2022-01-19T11:00:00Z",
+      "status": "en progreso"
+    },
+    {
+      "id": "115",
+      "title": "Implementación de control de versiones",
+      "description": "Integrar un sistema de control de versiones al proyecto",
+      "time": "2022-01-19T16:00:00Z",
+      "status": "pendiente"
+    },
+    {
+      "id": "116",
+      "title": "Investigación de buenas prácticas",
+      "description": "Investigar y aplicar buenas prácticas de desarrollo de software",
+      "time": "2022-01-20T10:30:00Z",
+      "status": "completo"
+    },
+    {
+      "id": "117",
+      "title": "Desarrollo de pruebas de integración",
+      "description": "Crear pruebas de integración para verificar el correcto funcionamiento del sistema",
+      "time": "2022-01-20T15:00:00Z",
+      "status": "en progreso"
+    },
+    {
+      "id": "118",
+      "title": "Implementación de seguridad",
+      "description": "Agregar medidas de seguridad adicionales al sistema",
+      "time": "2022-01-21T09:30:00Z",
+      "status": "pendiente"
+    },
+    {
+      "id": "119",
+      "title": "Reunión con el equipo de diseño",
+      "description": "Coordinar con el equipo de diseño la implementación de nuevas funcionalidades",
+      "time": "2022-01-21T14:30:00Z",
+      "status": "pendiente"
+    },
+    {
+      "id": "120",
+      "title": "Actualización de dependencias",
+      "description": "Actualizar las dependencias del proyecto a sus últimas versiones",
+      "time": "2022-01-24T11:00:00Z",
+      "status": "pendiente"
+    },
+    {
+      "id": "121",
+      "title": "Revisión de rendimiento",
+      "description": "Realizar una revisión de rendimiento y optimizar los puntos críticos",
+      "time": "2022-01-24T16:00:00Z",
+      "status": "en progreso"
+    },
+    {
+      "id": "122",
+      "title": "Migración de base de datos",
+      "description": "Realizar la migración de la base de datos a una nueva versión",
+      "time": "2022-01-25T10:00:00Z",
+      "status": "pendiente"
+    },
+    {
+      "id": "123",
+      "title": "Entrenamiento en nuevas tecnologías",
+      "description": "Realizar un curso de entrenamiento en nuevas tecnologías",
+      "time": "2022-01-25T15:30:00Z",
+      "status": "pendiente"
+    },
+    {
+      "id": "124",
+      "title": "Revisión de código",
+      "description": "Realizar una revisión exhaustiva del código de un compañero",
+      "time": "2022-01-26T09:00:00Z",
+      "status": "pendiente"
+    },
+    {
+      "id": "125",
+      "title": "Preparación de reporte de errores",
+      "description": "Preparar un reporte detallado de los errores encontrados en el sistema",
+      "time": "2022-01-26T14:00:00Z",
+      "status": "en progreso"
+    },
+    {
+      "id": "126",
+      "title": "Implementación de autenticación",
+      "description": "Agregar un sistema de autenticación al proyecto",
+      "time": "2022-01-27T10:30:00Z",
+      "status": "pendiente"
+    }
+  ]
+}
