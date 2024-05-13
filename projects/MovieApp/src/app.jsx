@@ -1,4 +1,4 @@
-import { MovieList } from "./components/movieList.jsx";
+import { MovieList } from "./components/MovieList.jsx";
 import { SearchBar } from "./components/SearchBar.jsx";
 import { useMovieApi } from "./hooks/useMovieApi.js";
 import { createPortal } from "react-dom";

@@ -2,7 +2,7 @@
 import { useEffect, useState} from 'react'
 import TasksList from './components/TasksList'
 import Confetti from 'canvas-confetti'
-import Send from './icons/send'
+import Send from './icons/Send'
 
 function App() {
   const [tasks,setTasks]= useState([

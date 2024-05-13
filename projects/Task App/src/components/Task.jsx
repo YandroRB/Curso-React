@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import Trash from '../icons/trash';
+import Trash from '../icons/Trash';
 
 
 function Task({children,id,isComplete,updateTasks,handleRemoveTask}) {
