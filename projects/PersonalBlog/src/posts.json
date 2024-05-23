@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Domina JavaScript 10 Trucos para Mejorar tu Código",
+    "author": "YandroRB",
+    "date": "2024-05-15",
+    "tags": ["JavaScript", "Programacion"],
+    "summary": "Este artículo presenta diez trucos útiles para mejorar tu código en JavaScript. Desde técnicas como la desestructuración de objetos y arrays, el uso de operadores ternarios y arrow functions, hasta conceptos más avanzados como el uso de Async/Await para manejar operaciones asincrónicas. Además, se resaltan buenas prácticas como evitar el uso de var en favor de let y const, y mantener el código organizado y documentado. Con estos trucos, podrás escribir código JavaScript más eficiente, legible y mantenible en tus proyectos de desarrollo web",
+    "file": "/src/posts/trucosjavascript.md"
+  },
+  {
+    "title": "Explorando Métodos de Array en JavaScript",
+    "author": "YandroRB",
+    "date": "2024-05-15",
+    "tags": ["JavaScript", "Programacion"],
+    "summary": "Los arrays son una parte esencial de JavaScript, permitiéndonos almacenar y manipular conjuntos de datos de manera eficiente. En este artículo, exploraremos algunos métodos clave que nos proporciona JavaScript para trabajar con arrays. Desde añadir y eliminar elementos hasta transformar y filtrar datos, estos métodos son herramientas poderosas para cualquier desarrollador. Acompáñanos mientras exploramos ejemplos prácticos de push(), pop(), map(), filter() y reduce(), ¡y descubre cómo pueden mejorar tu flujo de trabajo y hacer tu código más conciso y legible!",
+    "file": "/src/posts/metodosArrayJavaScript.md"
+  },
+  {
+    "title": "Los Mejores Lenguajes de Programación",
+    "author": "YandroRB",
+    "date": "2024-05-15",
+    "tags": ["Programacion"],
+    "summary": "Este artículo destaca los cinco principales lenguajes de programación en la industria actual. Python, JavaScript, Java, C++, y Swift. Cada uno ofrece características únicas y se utiliza en una variedad de aplicaciones, desde desarrollo web hasta sistemas embebidos y aplicaciones móviles. Exploraremos las fortalezas de cada lenguaje y su relevancia en el panorama actual de la programación.",
+    "file": "/src/posts/lenguajesProgramacion.md"
+  }
+]
