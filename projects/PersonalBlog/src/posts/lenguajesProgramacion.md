@@ -1,11 +1,3 @@
----
-title: Los Mejores Lenguajes de Programación
-author: YandroRB
-date: 2024-05-15
-tags: Programacion
-summary: Este artículo destaca los cinco principales lenguajes de programación en la industria actual. Python, JavaScript, Java, C++, y Swift. Cada uno ofrece características únicas y se utiliza en una variedad de aplicaciones, desde desarrollo web hasta sistemas embebidos y aplicaciones móviles. Exploraremos las fortalezas de cada lenguaje y su relevancia en el panorama actual de la programación.
----
-
 # Los Mejores Lenguajes de Programación
 
 En el vasto mundo de la programación, la elección del lenguaje adecuado puede marcar la diferencia entre el éxito y la frustración. A continuación, te presento una lista de algunos de los lenguajes de programación más destacados, cada uno con sus propias fortalezas y aplicaciones:
