@@ -8,7 +8,7 @@ function Header() {
           ENTERATE DE LAS ULTIMAS NOVEDADES Y DESCUBRE TRUCOS SOBRE EL
           DESARROLLO WEB
         </h1>
-        <a href="" className=" mx-auto mb-12">
+        <a href="#main" className=" mx-auto mb-12">
           <IconChevronDoubleDown className=" text-3xl  text-sky-300 hover:text-sky-500 animate-bounce" />
         </a>
       </header>
