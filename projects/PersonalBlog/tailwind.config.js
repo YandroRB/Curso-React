@@ -6,6 +6,9 @@ export default {
       backgroundImage: {
         mobileBackground: 'url("./assets/mobile.jpg")',
       },
+      gridTemplateColumns: {
+        footer: '1fr 420px',
+      },
     },
   },
   plugins: [],
