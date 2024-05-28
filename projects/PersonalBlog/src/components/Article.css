@@ -1,0 +1,30 @@
+.markdownContainer pre {
+  overflow-x: auto;
+}
+.markdownContainer h1 {
+  font-size: 2rem;
+  line-height: 1.1;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+.markdownContainer h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+.markdownContainer pre {
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  background-color: rgb(15 23 42);
+  color: rgb(209 213 219);
+  padding: 0.5rem;
+  border-radius: 3px;
+}
+.markdownContainer ul li {
+  margin-bottom: 0.2rem;
+}
+.markdownContainer ul li strong {
+  font-weight: 500;
+}
