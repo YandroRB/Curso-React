@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Post as PostType } from '../types';
+import './Post.css';
 
 interface Props {
   post: PostType;
@@ -17,7 +18,7 @@ function Post({ post, index }: Props) {
       <time className="text-xs font-semibold my-3">{post.date}</time>
       <p className="mb-3">{post.summary}</p>
       <Link
-        className=" w-[100px] hover:bg-sky-500 hover:font-semibold border border-sky-200 px-4 py-2 bg-sky-300 rounded-md text-gray-800"
+        className="neon-hover-leer w-[100px] hover:bg-sky-500 hover:font-semibold border border-sky-200 px-4 py-2 bg-sky-300 rounded-md text-gray-800"
         to={`/post/${index}/${post.title}`}
       >
         Leer mas
