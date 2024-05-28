@@ -1,30 +1,14 @@
-import { Link } from 'react-router-dom';
+import { usePostList } from '../customs/usePostList';
+import Post from './Post';
 
-export interface Post {
-  title: string;
-  author: string;
-  date: string;
-  tags: string[];
-  summary: string;
-  file: string;
-}
-export type ListOfPost = Post[];
-interface Props {
-  postList: ListOfPost;
-}
-function Main({ postList }: Props) {
+function Main() {
+  const { postList } = usePostList();
   return (
-    <main id="main">
-      <ul>
+    <main className=" pt-10 px-3" id="main">
+      <ul className=" space-y-5  md:gap-6 md:space-y-0 md:grid  md:grid-cols-2">
         {postList.map((post, index) => (
-          <li key={index}>
-            <article>
-              <Link to={`/post/${index}/${post.title}`}>
-                <h3>{post.title}</h3>
-              </Link>
-              <time>{post.date}</time>
-              <p>{post.summary}</p>
-            </article>
+          <li className="border-t-2  border-slate-500" key={index}>
+            <Post post={post} index={index} />
           </li>
         ))}
       </ul>

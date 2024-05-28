@@ -1,17 +1,10 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Header from './components/Header';
-import Main, { ListOfPost } from './components/Main';
 import Article from './components/Article';
-import { useEffect, useState } from 'react';
-import { fetchData } from './utils';
+
+import Main from './components/Main';
 
 function App() {
-  const [postList, setPostList] = useState<ListOfPost>([]);
-  useEffect(() => {
-    fetchData()
-      .then((response) => setPostList(response))
-      .catch((error) => console.log(error));
-  }, []);
   return (
     <BrowserRouter>
       <Routes>
@@ -20,14 +13,11 @@ function App() {
           element={
             <>
               <Header />
-              <Main postList={postList} />
+              <Main />
             </>
           }
         />
-        <Route
-          path="/post/:id/:title"
-          element={<Article postList={postList} />}
-        />
+        <Route path="/post/:id/:title" element={<Article />} />
       </Routes>
     </BrowserRouter>
   );
