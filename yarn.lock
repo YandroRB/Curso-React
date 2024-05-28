@@ -1374,6 +1374,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@emailjs/browser@npm:^4.3.3":
+  version: 4.3.3
+  resolution: "@emailjs/browser@npm:4.3.3"
+  checksum: 10c0/deb9a4d76cca662a58da139f43ad4b6417485edbcf7a29569d516adee6462fb95e014a8a6f31bbaddf9ea3e77dd20d363ae8a377b289a7d9f95f568a76eed8b0
+  languageName: node
+  linkType: hard
+
 "@emotion/is-prop-valid@npm:^0.7.3":
   version: 0.7.3
   resolution: "@emotion/is-prop-valid@npm:0.7.3"
@@ -7259,6 +7266,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "personalblog@workspace:projects/PersonalBlog"
   dependencies:
+    "@emailjs/browser": "npm:^4.3.3"
     "@types/react": "npm:^18.2.66"
     "@types/react-dom": "npm:^18.2.22"
     "@typescript-eslint/eslint-plugin": "npm:^7.2.0"
