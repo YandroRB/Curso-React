@@ -6,7 +6,7 @@ function Footer() {
   return (
     <div className=" bg-sky-900 px-4 pt-4 space-y-3 md:space-y-0 md:grid md:grid-cols-footer">
       <div className="flex justify-center  md:col-span-1 text-white gap-x-2">
-        <a href="https://github.com/YandroRB">
+        <a href="https://github.com/YandroRB" target="_blank" rel="noreferrer">
           <MdiGithub className=" size-10" />
         </a>
         <a href="">
